@@ -1,6 +1,13 @@
 {
   "schema_version": "2.4.0",
   "package_id": "TDP-DAF-ACP-7740-REV-C",
+  "gpu_accelerator": {
+    "accelerated": true,
+    "backend": "PyTorch 2.12.0+cu130 CUDA",
+    "device_name": "NVIDIA RTX PRO 1000 Blackwell Generation Laptop GPU",
+    "compute_capability": "12.0 (sm_120)",
+    "vram_mib": 8150.6
+  },
   "ia_compliance_verdict": {
     "passed": true,
     "mil_std_31000b_score": 99.4,
@@ -1453,7 +1460,7 @@
     "collision_free_verified": true,
     "datum_a_calibrated_p99_residual_mm": 0.0145,
     "estimated_physical_cycle_time_sec": 78.88,
-    "planner_compute_time_ms": 24.16
+    "planner_compute_time_ms": 429.03
   },
   "anomalies": [
     {
