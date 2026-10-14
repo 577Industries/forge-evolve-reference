@@ -150,7 +150,7 @@ def generate_charts_and_schematics(output_dir: pathlib.Path = FIGURES_DIR) -> No
         ),
         (
             "fig_arch_dv012.png",
-            "Forge Evolve Kinetic System Architecture & Autonomous TDP-to-Robot Pipeline (DAF27BZ01-DV012)",
+            "Forge Kinetic System Architecture & Autonomous TDP-to-Robot Pipeline (DAF27BZ01-DV012)",
             [
                 (2, 6, 17, 24, NAVY, "1. Heterogeneous\nTDP Artifacts\n\n• 3D STEP / IGES CAD\n• 2D PDF Blueprints\n• BOMs & Process Specs\n• Exception Repair Gate"),
                 (22, 6, 17, 24, TEAL, "2. Multimodal 2D/3D\nSemantic Extractor\n\n• OpenCASCADE B-Rep\n• LayoutLMv3 + Vec OCR\n• Raycast 3D Binding\n• 99.1% NIST MBE Prec."),
@@ -186,7 +186,7 @@ def generate_charts_and_schematics(output_dir: pathlib.Path = FIGURES_DIR) -> No
     opt_link = np.maximum(55.04, tcp_clearance - 16.5 + 6.0 * np.cos(0.35 * t_steps))
     ax1.plot(t_steps, tcp_clearance, color=SLATE, linestyle=":", lw=1.4, label="Sensor TCP-Only Distance (mm)")
     ax1.plot(t_steps, unopt_link, color=CRIMSON, linestyle="--", lw=1.4, label="Unoptimized Forearm/Elbow Link (Collision Risk)")
-    ax1.plot(t_steps, opt_link, color=TEAL, lw=2.0, label="Forge Evolve 6-Link Swept-Capsule CCD (≥55.0 mm)")
+    ax1.plot(t_steps, opt_link, color=TEAL, lw=2.0, label="Forge Kinetic 6-Link Swept-Capsule CCD (≥55.0 mm)")
     ax1.axhline(45.0, color=AMBER, linestyle="-.", lw=1.3, label="Mandatory Safety Envelope Floor (45.0 mm)")
     ax1.set_xlabel("Trajectory Execution Time Across 18 Bulkhead Waypoints (s)", fontsize=8.5, fontweight="bold", color=NAVY)
     ax1.set_ylabel("Minimum 3D SDF Obstacle Clearance (mm)", fontsize=8.5, fontweight="bold", color=NAVY)

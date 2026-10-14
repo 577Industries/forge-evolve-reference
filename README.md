@@ -1,22 +1,36 @@
-# Forge Evolve — Deterministic Engineering, TDP & Robotic Equivalence Reference
+# Forge Evolve & Forge Kinetic — Deterministic Engineering, TDP & Robotic Equivalence Reference
 
 [![Forge Evolve Equivalence & D2P2 Verification CI](https://github.com/577Industries/forge-evolve-reference/actions/workflows/ci_equivalence_verification.yml/badge.svg)](https://github.com/577Industries/forge-evolve-reference/actions/workflows/ci_equivalence_verification.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-0D9488.svg)](https://www.python.org/)
 [![PQC FIPS 203](https://img.shields.io/badge/crypto-ML--KEM--768%20%2B%20AES--256--GCM-0F2942.svg)](https://www.577industries.com/evolve)
 
 **Move the baseline forward. Preserve what matters.**  
-*Public Reference Implementation by [577 Industries Inc.](https://www.577industries.com/evolve) (Columbus, Ohio | PI: Dr. Thomas G. Waweru)*  
-*Interactive 3D MBD & Kinetic Studio: [https://www.577industries.com/evolve/studio](https://www.577industries.com/evolve/studio)*
+*Public Reference Implementation by [577 Industries Inc.](https://www.577industries.com) (Columbus, Ohio | PI: Dr. Thomas G. Waweru)*  
+*Interactive WebGL2 3D Studios: [Evolve 3D MBD Studio (`/evolve/studio`)](https://www.577industries.com/evolve/studio) · [Kinetic 3D Workcell Studio (`/kinetic/studio`)](https://www.577industries.com/kinetic/studio)*
+
+---
+
+## Modular Product & Domain Extension Repositories
+
+In addition to this unified end-to-end benchmark bundle (`forge-evolve-reference`), the architecture is decomposed into two standalone core product engines and their domain-specific defense extensions:
+
+| Repository | Layer | Scope & Primary Surface |
+| :--- | :--- | :--- |
+| [**`577Industries/forge-evolve`**](https://github.com/577Industries/forge-evolve) | **Core Product (`Evolve`)** | Deterministic Code & Artifact Modernization Engine (`Discovery → CLAR IR → Planner → Differential Equivalence Oracle → Hashchain Provenance`). [`/evolve`](https://www.577industries.com/evolve) |
+| [**`577Industries/forge-evolve-tdp`**](https://github.com/577Industries/forge-evolve-tdp) | **Evolve Extension (`DAF27BZ01-DV008`)** | **Forge Evolve TDP** — Zero-Trust STEP AP242 / 2D PDF MBD modernization, `ML-KEM-768` + `AES-256-GCM` Merkle-DAG ledger, `<300 ms` WebGPU streaming, and 3D PointNet++ NDI sustainment AI. [`/work/forge-evolve-tdp`](https://www.577industries.com/work/forge-evolve-tdp) |
+| [**`577Industries/forge-evolve-tmpc`**](https://github.com/577Industries/forge-evolve-tmpc) | **Evolve Extension (`DON26BZ01-NV013`)** | C#/.NET Mission-Planning Code Modernization & Split-Disposition Verification Harness. [`/work/forge-evolve-tmpc`](https://www.577industries.com/work/forge-evolve-tmpc) |
+| [**`577Industries/forge-kinetic`**](https://github.com/577Industries/forge-kinetic) | **Core Product (`Kinetic`)** | Physical AI, Multi-Sensor Operating Envelopes, 6-DOF + AGV Whole-Body IK, 200 Hz 6-Link Swept-Capsule SDF Collision Avoidance, & Multi-Vendor URTS Post-Processors (`FANUC`, `KUKA`, `ABB`, `SROS2`). [`/kinetic`](https://www.577industries.com/kinetic) |
+| [**`577Industries/forge-kinetic-mbd`**](https://github.com/577Industries/forge-kinetic-mbd) | **Kinetic Extension (`DAF27BZ01-DV012`)** | **Forge Kinetic** Autonomous TDP-to-Robot Workcell Compiler — 99.1% NIST MBE PMI topological binding, 2-station AGV reachability clustering, Datum-A 3-fiducial docking calibration (`0.0145 mm` p99 TCP residual), and no-code sustainment interface. [`/work/forge-kinetic-mbd`](https://www.577industries.com/work/forge-kinetic-mbd) |
 
 ---
 
 ## Overview
 
-**Forge Evolve** is a deterministic modernization and equivalence engine spanning software codebases, Model-Based Definition (MBD) Technical Data Packages (TDPs), and autonomous multi-axis robotic execution.
+**Forge Evolve** (code & technical data modernization) and **Forge Kinetic** (physical AI & autonomous robotic execution) enforce a deterministic equivalence contract across software codebases, Model-Based Definition (MBD) Technical Data Packages (TDPs), and multi-axis robotic workcells.
 
-Whether migrating legacy flight/scientific code (`Fortran`, `Ada`, `C++`, `COBOL`), modernizing heterogeneous 3D/2D TDPs into a Zero-Trust configuration ledger (**Forge Evolve TDP**), or compiling GD&T tolerances into collision-free multi-vendor robotic inspection trajectories (**Forge Evolve Kinetic**), **small differences can change the contract**. A signed angle, surface normal vector, or bilateral tolerance zone can describe the same nominal geometry and still break a downstream rule or cause a physical link collision.
+Whether migrating legacy flight/scientific code (`Fortran`, `Ada`, `C++`, `COBOL`, `.NET`), modernizing heterogeneous 3D/2D TDPs into a Zero-Trust configuration ledger (**Forge Evolve TDP**), or compiling GD&T tolerances into collision-free multi-vendor robotic inspection trajectories (**Forge Kinetic**), **small differences can change the contract**. A signed angle, surface normal vector, or bilateral tolerance zone can describe the same nominal geometry and still break a downstream rule or cause a physical link collision.
 
-Forge Evolve enforces a three-stage verification contract across every artifact:
+Both platforms enforce a three-stage verification contract across every artifact:
 1. **`01 / A Behavioral & Geometric Baseline`:** Parse 3D B-Rep topology (`STEP AP242`, `IGES`), 2D engineering blueprints (`PDF`), and source specifications into the **Canonical TDP Property Graph (`CTDP-G v2.4`)**, locking datum reference frames `[A|B|C]`, tolerances, and Attribute-Based Access Control (ABAC) security scopes.
 2. **`02 / A Reviewed Working Slice`:** Transform bounded modules into progressive WebGPU BVH-Octree mesh streams (`<300 ms` time-to-first-frame) and **Unified Robotic Task Specifications (`URTS`)**, verifying continuous 200 Hz 6-link swept-capsule obstacle clearance and Datum-A fiducial calibration in a physics sandbox.
 3. **`03 / A Verified Migration & Sustainment Decision`:** *Separate repair from translation.* Explicitly log multi-format exceptions (`EXC-01`..`EXC-06`) and 3D NDI point-cloud inspection deltas inside a hardware-signed, post-quantum (`ML-KEM-768` + `AES-256-GCM`) SHA-256 Merkle-DAG commit.
